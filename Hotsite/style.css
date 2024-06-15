@@ -4,44 +4,77 @@
     box-sizing: border-box;
 }
 body {
+    height: 100vw;
+    background-color: black;
+    background-image: url(/img/Background_CSS.jpg);
+    background-size: cover;
+    background-position: center;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+a:hover{
+    color: orange;
+}
+/* HEADER*/
+header{
+    position: relative;
+    padding: 0px 2rem;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    margin: 3px;
-    flex: 1 1 100vw;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
-
-header, nav, main, aside, footer {
-    background-color: rgba(137, 98, 163, 0.788);
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar .limks{
     display: flex;
-    margin: 3px;
+    gap: 2rem;
 }
-header {
-    flex: 1 1 100vw;
-    flex-wrap: wrap;
-    height: 100px;
-    background-image: url(./img/11c88139ac757ed325a12149b83cf014_t.jpeg);
+.navbar .toggle_btn{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
 }
-
-.luffy {
-    flex: 0 1 200px;
-    background-color: rgb(80, 53, 99);
-    width: 50px;
-    height: 100px;}
-nav {
-    flex: 1 1 200px;
-    flex-wrap: wrap;
+.action_btn{
+    background-color: orange;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size:  0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
 }
-main {
-    flex: 20 1 500px;
-    flex-wrap: wrap;
-    height: calc(100vh - 224px);
+.action_btn:hover{
+    scale: 1.05;
+    color: #fff
 }
-aside {
-    flex: 1 1 200px;
-    flex-wrap: wrap;
+.action_btn:active{
+    scale: 0.95;
 }
-footer {
-    flex: 1 1 100vw;
-    flex-wrap: wrap;
-    height: 100px
+/* RESPONSIVE DESING */
+@media(max-width: 992px){
+    .navbar-links,
+    .navbar .action_btn {
+    display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
 }
