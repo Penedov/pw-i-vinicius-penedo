@@ -4,25 +4,71 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"/>
         <title>World Otaku</title>
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
         <header>
             <div class="navbar">
-                <div class="logo"><a href="#">World Otaku</a></div>
+                <div class="logo">
+                    <a href="#">World Otaku</a>
+                </div>
                 <ul class="links">
-                    <li class="hero">Home</li>
-                    <li class="about">About</li>
-                    <li class="services">Services</li>
-                    <li class="contact">Contact</li>
+                    <li><a href="Home">Home</a></li>
+                    <li><a href="About">About</a></li>
+                    <li><a href="Service">Services</a></li>
+                    <li><a href="Contact">Contact</a></li>
                 </ul>
-                <a href="#" class="action_btn">Inscreva-se</a>
+                <a href="./formulario.html" class="action_btn">Inscreva-se</a>
+
                 <div class="toggle_btn">
                     <i class="fa-solid fa-bars"></i>
                 </div>
+
+
+                <div class="dropdown_menu open">
+                    <li><a href="Home">Home</a></li>
+                    <li><a href="About">About</a></li>
+                    <li><a href="Service">Services</a></li>
+                    <li><a href="Contact">Contact</a></li>
+                    <li>
+                        <a href="#" class="action_btn">Inscreva-se</a>
+                    </li>
+                </div>
             </div>
         </header>
+        <main>
+            <section id="hero">
+                <h1>Welcome</h1>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>
+                    Ullam odit, sunt veniam recusandae inventore et omnis, voluptatem porro <br>
+                    consequuntur iste libero accusantium molestias nemo impedit fugiat sint nam. 
+                    Fugiat, quod.
+                </p>
+            </section>
+        </main>
+        <script>
+            const togglebtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+            togglebtn.onclick = function () {
+                dropDownMenu
+                    .classList
+                    .toggle('open')
+                const isOpen = dropDownMenu
+                    .classList
+                    .contains('open')
+                toggleBtnIcon.classList = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars'
+            }
+        </script>
     </body>
 </html>
