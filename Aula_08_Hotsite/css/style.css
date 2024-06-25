@@ -6,7 +6,7 @@
 body {
     height: 100vh;
     background-color: black;
-    background-image: url("/Hotsite/img/Background_CSS.jpg");
+    background-image: url("/Aula_08_Hotsite/img/Background_css.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -113,6 +113,16 @@ section#hero{
     color: #fff;
 }
 #hero h1{
+    font-size: 3rem;
+    margin: 1rem;
+}
+.pokemonh1{
+    color: black;
+    font-size: 3rem;
+    margin: 1rem;
+}
+.pokemonP{
+    color: #0a0505;
     font-size: 3rem;
     margin: 1rem;
 }
